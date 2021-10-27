@@ -4716,6 +4716,7 @@ extern "C" {
     pub fn aio_cancel(fd: ::c_int, aiocbp: *mut aiocb) -> ::c_int;
     pub fn chflags(path: *const ::c_char, flags: ::c_uint) -> ::c_int;
     pub fn fchflags(fd: ::c_int, flags: ::c_uint) -> ::c_int;
+    pub fn clock_settime(clk_id: ::clockid_t, tp: *const ::timespec) -> ::c_int;
     pub fn clock_getres(clk_id: ::clockid_t, tp: *mut ::timespec) -> ::c_int;
     pub fn clock_gettime(clk_id: ::clockid_t, tp: *mut ::timespec) -> ::c_int;
     pub fn lio_listio(
